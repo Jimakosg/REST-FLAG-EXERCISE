@@ -7,20 +7,23 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { ProductsModule } from './products/products.module';
+import {CountriesModule} from './countries/countries.module';
+import {CountryListComponent} from './countries/country-list/country-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
     ProductsModule,
-    HttpClientModule
+    HttpClientModule,
+    CountriesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, CountryListComponent]
 })
 export class AppModule { }
